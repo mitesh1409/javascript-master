@@ -63,41 +63,41 @@ Execution Context is created in 2 phases:
 
 **2.2 Function Invocation & Execution**
 
-During the execution, when JavaScript encounters a function name along with its
+During the execution, when JavaScript encounters a function name along with its  
 parameters inside paranthesis, it invokes that function and starts executing it.
 
-Functions are like mini programs, they have a set of instructions to do a particular job.
+Functions are like mini programs, they have a set of instructions to do a particular job.  
 
-Each function in JavaScript has its own "Execution Context".
-So whenever a function executes, its "Execution Context" is created before that.
+Each function in JavaScript has its own "Execution Context".  
+So whenever a function executes, its "Execution Context" is created before that.  
 
-As soon as the function finishes its execution, its "Execution Context" is deleted.
+As soon as the function finishes its execution, its "Execution Context" is deleted.  
 
-Similarly when all the JavaScript code finishes its execution, "Global Execution Context" is deleted.
+Similarly when all the JavaScript code finishes its execution, "Global Execution Context" is deleted.  
 
 **2.3 Call Stack in JavaScript**
 
-There can be multiple "Execution Contexts" for a JavaScript code,
-there can be multiple levels of nesting as well.
-So how JavaScript manages multiple "Execution Contexts"?
-Through a Stack (its a kind of Data Structure).
-And we call it **Call Stack**.
+There can be multiple "Execution Contexts" for a JavaScript code,  
+there can be multiple levels of nesting as well.  
+So how JavaScript manages multiple "Execution Contexts"?  
+Through a Stack (its a kind of Data Structure).  
+And we call it **Call Stack**.  
 
-The "Global Execution Context" resides at the bottom of this Call Stack.
-Whenever there is a function call, its "Execution Context" is created and then pushed to this Call Stack.
-And as soon as function finishes its execution, its "Execution Context" is popped out from this Call Stack and then destroyed.
-This is how the calling function gets back the control.
+The "Global Execution Context" resides at the bottom of this Call Stack.  
+Whenever there is a function call, its "Execution Context" is created and then pushed to this Call Stack.  
+And as soon as function finishes its execution, its "Execution Context" is popped out from this Call Stack and then destroyed.  
+This is how the calling function gets back the control.  
 
-> Call Stack maintains
-> the order of execution
-> of execution contexts.
+> Call Stack maintains  
+> the order of execution  
+> of execution contexts.  
 
-Other names of the Call Stack in JavaScript are:
-1. Execution Context Stack
-2. Program Stack
-3. Control Stack
-4. Runtime Stack
-5. Machine Stack
+Other names of the Call Stack in JavaScript are:  
+1. Execution Context Stack  
+2. Program Stack  
+3. Control Stack  
+4. Runtime Stack  
+5. Machine Stack  
 
 ---
 
