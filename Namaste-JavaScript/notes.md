@@ -13,14 +13,14 @@ Execution Context is the first core fundamental.
 > happens inside an  
 > "Execution Context".  
 
-Imagine the "Execution Context" as a big box or a container in which the whole JavaScript code executes.
+Imagine the "Execution Context" as a big box or a container in which the whole JavaScript code executes.  
 
-Execution Context has two components:
+Execution Context has two components:  
 
-- Memory Component/Variable Environment
+- Memory Component/Variable Environment  
   Variables and Functions are stored here as "key:value" pairs.
 
-- Code Component/Thread of Execution
+- Code Component/Thread of Execution  
   This is the place where the code is executed line by line (one line at a time, from top to bottom).
 
 By default, all the JavaScript code executes in the "Global Execution Context".
@@ -32,10 +32,10 @@ By default, all the JavaScript code executes in the "Global Execution Context".
 > Single Threaded  
 > language.  
 
-Synchronous means line by line in an order (from top to bottom).
+Synchronous means line by line in an order (from top to bottom).  
 Single Threaded means JavaScript can execute only one command at a time.
 
-Synchronous Single Threaded means JavaScript can execute only one command at a time and
+Synchronous Single Threaded means JavaScript can execute only one command at a time and  
 in a specific order (means it can go to the next line once the current line finishes its execution).
 
 ---
@@ -48,17 +48,18 @@ Remember - Everything in JavaScript happens inside an "Execution Context".
 
 Execution Context is created first before running any JavaScript code.
 
-Every JavaScript program starts with a "Global Execution Context".
-All other execution contexts are placed on top of it OR
-we can say they live inside it.
+Every JavaScript program starts with a "Global Execution Context".  
+All other execution contexts are placed on top of it OR  
+we can say they live inside it.  
 
-Execution Context is created in 2 phases:
-- Memory Creation
-  JavaScript scans the whole code line by line and allocates memory to all the variables and functions.
-  variables store the special value `undefined`.
-  functions store their whole code as it is.
-- Code Execution
-  JavaScript executes the code line by line.
+Execution Context is created in 2 phases:  
+- Memory Creation  
+  JavaScript scans the whole code line by line and allocates memory to all the variables and functions.  
+  Variables declared with `var` - initialized with value `undefined`.  
+  Variables declared with `let`/`const` - never initialized, they remain in TDZ (Temporal Dead Zone).  
+  Functions store their whole code/body as it is.  
+- Code Execution  
+  JavaScript executes the code line by line from top to bottom.  
 
 **2.2 Function Invocation & Execution**
 
