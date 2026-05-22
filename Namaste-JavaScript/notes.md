@@ -2,6 +2,13 @@
 
 [Namaste JavaScript by Akshay Saini](https://www.youtube.com/playlist?list=PLxnjbfm5MCHFbRlyVCAqpJFdIzPN_IPID)
 
+**Index**  
+
+1. How JavaScript Works 🔥 & Execution Context | Namaste JavaScript Ep.1
+2. How JavaScript Code is executed? ❤️ & Call Stack | Namaste JavaScript Ep. 2
+3. Hoisting in JavaScript 🔥(variables & functions) | Namaste JavaScript Ep. 3
+4. How functions work in JS ❤️ & Variable Environment | Namaste JavaScript Ep. 4
+
 ---
 
 ## #1 How JavaScript Works 🔥 & Execution Context | Namaste JavaScript Ep.1
@@ -101,24 +108,25 @@ Other names of the Call Stack in JavaScript are:
 
 ---
 
-#### #3 Hoisting in JavaScript 🔥(variables & functions) | Namaste JavaScript Ep. 3
+## #3 Hoisting in JavaScript 🔥(variables & functions) | Namaste JavaScript Ep. 3
 
 **3.1 Variable and Function Hoisting in JavaScript**
 
-JavaScript allows to access variables and functions even before they are defined/declared or set.
-This is called Variable and Function Hoisting in JavaScript.
+JavaScript allows to access variables and functions even before they are defined/declared or set.  
+This is called Variable and Function Hoisting in JavaScript.  
 
-How it is done?
-Even before the JavaScript code is executed, memory is allocated to all of its variables and functions.
-This is done in the "Memory Creation" phase of the "Execution Context".
-All variables are allocated memory and by default they hold a special value called `undefined`.
-All functions are allocated memory and they store their whole code/function body.
+How it is done?  
+Even before the JavaScript code is executed, memory is allocated to all of its variables and functions.  
+This is done in the "Memory Creation" phase of the "Execution Context".  
+Variables declared with `var` - initialized with value `undefined`.  
+Variables declared with `let`/`const` - never initialized, they remain in TDZ (Temporal Dead Zone).  
+All functions are allocated memory and they store their whole code/body.  
 
-This is how variables and functions are available for use even before their definition/declaration.
+This is how variables and functions are available for use even before their definition/declaration.  
 
-Play with the following code to get the exact idea about Variable and Function Hoisting:
+Play with the following code to get the exact idea about Variable and Function Hoisting:  
 
-```
+```javascript
 // Put a break-point here and analyse call stack, scope etc.
 // using developer tools of the browser.
 
@@ -155,7 +163,7 @@ console.log(sayHello);
 
 ---
 
-#### #4 How functions work in JS ❤️ & Variable Environment | Namaste JavaScript Ep. 4
+## #4 How functions work in JS ❤️ & Variable Environment | Namaste JavaScript Ep. 4
 
 Run the following code in the browser, check the different execution contexts and call stack.
 
