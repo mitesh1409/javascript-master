@@ -8,10 +8,10 @@
 
 **1.1 Execution Context**
 
-Execution Context is the first core fundamental.
-> Everything in JavaScript 
-> happens inside an 
-> "Execution Context".
+Execution Context is the first core fundamental.  
+> Everything in JavaScript  
+> happens inside an  
+> "Execution Context".  
 
 Imagine the "Execution Context" as a big box or a container in which the whole JavaScript code executes.
 
@@ -27,10 +27,10 @@ By default, all the JavaScript code executes in the "Global Execution Context".
 
 **1.2 Synchronous & Single Threaded**
 
-> JavaScript is a
-> Synchronous
-> Single Threaded
-> language.
+> JavaScript is a  
+> Synchronous  
+> Single Threaded  
+> language.  
 
 Synchronous means line by line in an order (from top to bottom).
 Single Threaded means JavaScript can execute only one command at a time.
