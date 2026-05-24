@@ -167,7 +167,7 @@ console.log(sayHello);
 
 Run the following code in the browser, check the different execution contexts and call stack.
 
-```
+```javascript
 var x = 1;
 a();
 b();
@@ -188,31 +188,31 @@ function b() {
 
 #### #5 SHORTEST JS Program 🔥 window & this keyword | Namaste JavaScript Ep. 5
 
-**5.1 Shortest JavaScript Program**
+**5.1 Shortest JavaScript Program**  
 
-The shortest JavaScript program is an empty JavaScript file.
-JavaScript still executes that file, it creates the Global Execution Context and puts it inside the Call Stack.
-It also creates the `window` object.
+The shortest JavaScript program is an empty JavaScript file.  
+JavaScript still executes that file, it creates the Global Execution Context and puts it inside the Call Stack.  
+It also creates the `window` object.  
 
-**5.2 `this` Points to `window` in the Global Execution Context**
+**5.2 `this` Points to `window` in the Global Execution Context**  
 
-In the "Global Execution Context", `this` equals to `window` (the Global object).
-`this === window // gives true`
-`this` points to the `window` object.
+In the "Global Execution Context", `this` equals to `window` (the Global object).  
+`this === window // gives true`  
+`this` points to the `window` object.  
 
-**5.3 Global Execution Context OR Global Space**
+**5.3 Global Execution Context OR Global Space**  
 
-What is Global Space?
-OR
-Which code has the "Global Execution Context"?
-Any code that you write which is not inside a function is considered to be in the Global Space.
+What is Global Space?  
+OR  
+Which code has the "Global Execution Context"?  
+Any code that you write which is not inside a function is considered to be in the Global Space.  
 
-All the variables and functions inside the Global Space are attached to the Global object which is `window`.
+All the variables and functions inside the Global Space are attached to the Global object which is `window`.  
 
-By default JavaScript will refer the variables/functions in the Global Execution Context when they are not prefixed with anything.
+By default JavaScript will refer the variables/functions in the Global Execution Context  
+when they are not prefixed with anything.  
 
-```
-
+```javascript
 var points = 100;
 
 function sayHello() {
@@ -222,22 +222,24 @@ function sayHello() {
 console.log(window.points);
 console.log(this.points);
 console.log(points);
-
 ```
 
 ---
 
 #### #6 undefined vs not defined in JS 🤔 | Namaste JavaScript Ep. 6
 
-`undefined` is a JavaScript keyword, it denotes a special value that is used as a placeholder for the variable which is not assigned a value yet.
-The variables are allocated memory and they hold a special value `undefined` in the Memory Creation phase of the "Execution Context".
+`undefined` is a JavaScript keyword, it denotes a special value that is used as a placeholder  
+for the variable which is not assigned a value yet.  
+The variables are allocated memory and they hold a special value `undefined`  
+in the Memory Creation phase of the "Execution Context".  
 
-"not defined error" means that the variable is not allocated memory in the Memory Creation phase of the "Execution Context".
+"not defined error" means that the variable is not allocated memory in  
+the Memory Creation phase of the "Execution Context".  
 
-JavaScript is a **Loosely/Weakly Typed** language.
-The same variable can hold multiple types of values.
+JavaScript is a **Loosely/Weakly Typed** language.  
+The same variable can hold multiple types of values.  
 
-```
+```javascript
 var a;
 console.log(a);
 
@@ -248,14 +250,14 @@ a = 'Hello :)'
 console.log(a);
 ```
 
-Assigning `undefined` to a variable is bad thing/bad practice in JavaScript. Never do this.
+Assigning `undefined` to a variable is bad thing/bad practice in JavaScript. Never do this.  
 
-```
+```javascript
 var a = 50;
 a = undefined;
 ```
 
-Even though JavaScript allows this, we should not do this.
+Even though JavaScript allows this, we should not do this.  
 
 ---
 
