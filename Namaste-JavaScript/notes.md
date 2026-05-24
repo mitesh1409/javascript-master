@@ -186,7 +186,7 @@ function b() {
 
 ---
 
-#### #5 SHORTEST JS Program 🔥 window & this keyword | Namaste JavaScript Ep. 5
+## #5 SHORTEST JS Program 🔥 window & this keyword | Namaste JavaScript Ep. 5
 
 **5.1 Shortest JavaScript Program**  
 
@@ -226,7 +226,7 @@ console.log(points);
 
 ---
 
-#### #6 undefined vs not defined in JS 🤔 | Namaste JavaScript Ep. 6
+## #6 undefined vs not defined in JS 🤔 | Namaste JavaScript Ep. 6
 
 `undefined` is a JavaScript keyword, it denotes a special value that is used as a placeholder  
 for the variable which is not assigned a value yet.  
@@ -261,7 +261,7 @@ Even though JavaScript allows this, we should not do this.
 
 ---
 
-#### #7 The Scope Chain, 🔥 Scope & Lexical Environment | Namaste JavaScript Ep. 7
+## #7 The Scope Chain, 🔥 Scope & Lexical Environment | Namaste JavaScript Ep. 7
 
 Scope means the area/region where you can access a specific variable or a function.
 
