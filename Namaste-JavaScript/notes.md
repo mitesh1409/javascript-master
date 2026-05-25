@@ -270,43 +270,60 @@ Scope is directly dependent on the **Lexical Environment**.
 Whenever a function is invoked its execution context is created.  
 Along with execution context a lexical environment is also created.  
 
-What is a lexical environment?  
-The lexical environment is the local memory along with the lexical environment of its parent.  
+**Lexical Environment**  
 
-Lexical Environment  
-Lexical as a term means in heirarchy or in a sequence.  
-Lexical Environment = Current Environment + Chain of all the Parent Environments (in heirarchy)  
+In JavaScript, lexical refers to the physical location of code in the source file —  
+so a function's lexical environment is determined by where it was written,  
+not where it gets called. That's the key distinction.
 
-Lexical Environment = Local Memory + Reference to the Lexical Environment of its parent  
+> Each environment has two parts:  
+> an Environment Record (its own variables, functions etc.) and  
+> an outer reference pointing to the enclosing scope — set at definition time, not call time.  
 
-In case of the Global Execution context, reference to the Lexical Environment is null.  
-So scope chain ends at the Global Execution context.  
+Lexical Environment is a data structure created every time a function is invoked (or a block is entered). It has two parts:  
 
-What is Scope Chain?  
-Chain of all the lexical environments and the parent references is known as Scope Chain.  
-Chain of all the scopes in a parent-child heirarchy.  
+- an Environment Record — the variables, function declarations, and bindings that belong to the current scope
+- an `outer` reference — a pointer to the enclosing lexical environment, set at the time the function was *written* (not when it's called)
 
-Example
+**Scope Chain**  
+
+The linked list formed by following `outer` references from the current lexical environment up through every enclosing environment, all the way to the global environment (whose `outer` is `null`). When JavaScript resolves a variable name, it walks this chain — starting at the innermost environment and moving outward until it finds the binding or throws a `ReferenceError`.
+
+Example  
 
 ```javascript
-function a() {
-  var b = 10;
+let ten = 10;
 
-  c();
+function outer() {
+  let twenty = 20;
 
-  function c() {
-    console.log(b);
+  inner();
+
+  function inner() {
+    let thirty = 30;
+    console.log(ten);
+    console.log(twenty);
+    console.log(thirty);
   }
+
+  console.log(ten);
+  console.log(twenty);
+  console.log(thirty); // thirty is not defined
 }
 
-a();
+outer();
+
+console.log(ten);
+console.log(twenty); // twenty is not defined
+console.log(thirty); // thirty is not defined
 ```
 
 ---
 
-#### #8 let & const in JS 🔥Temporal Dead Zone | Namaste JavaScript Ep. 8
+## #8 let & const in JS 🔥Temporal Dead Zone | Namaste JavaScript Ep. 8
 
-##### 8.1 Hoisting
+**8.1 Hoisting**  
+
 Are `let` and `const` declarations hoisted?
 Yes, `let` and `const` declarations are hoisted.
 But they are hoisted differently then the `var` declarations.
