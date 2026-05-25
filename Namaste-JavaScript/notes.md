@@ -520,23 +520,24 @@ Read article - [ES2015 `const` is not about immutability](https://mathiasbynens.
 
 ---
 
-#### #9 BLOCK SCOPE & Shadowing in JS 🔥| Namaste JavaScript 🙏 Ep. 9
+## #9 BLOCK SCOPE & Shadowing in JS 🔥| Namaste JavaScript 🙏 Ep. 9
 
-##### 9.1 What is a Block?
+**9.1 What is a Block?**  
 
-Block is defined by two curly braces `{}`.
-The code between these two curly braces is called a Block.
+Block is defined by two curly braces `{}`.  
+The code between these two curly braces is called a Block.  
+It can have one or more lines of code.  
 
-Block is also known as a **compound statement**.
+Block is also known as a **compound statement**.  
+Block is used to combine multiple lines of code into a group.  
 
-Block is used to combine multiple lines of code into a group.
-
-##### 9.2 What is a Block Scope?
+**9.2 What is a Block Scope?**  
 
 Block scope means what all the variables and functions we can access inside the block.
 
-Example
-```
+Example  
+
+```javascript
 {
   var a = 10;
   let b = 20;
@@ -544,24 +545,25 @@ Example
 }
 ```
 
-Put a debugger on the first line and check Scope tab in the browser console.
+Put a debugger on the first line and check Scope tab in the browser console.  
 
-Variable `a` is attached to the Global object (`window`/`this`)
-and is inside the Global memory space.
+Variable `a` is attached to the Global object (`window`/`this`)  
+and is inside the Global memory space.  
 
-Variables `b` and `c` are not attached to the Global object (`window`/`this`)
-and they are inside the Block memory space.
+Variables `b` and `c` are not attached to the Global object (`window`/`this`)  
+and they are inside the Block memory space.  
 
-`let`/`const` variables are always block scoped,
-this means they are accessible only inside the block in which they are declared/initialized.
-We can't access them outside the block.
+`let`/`const` variables are always block scoped,  
+this means they are accessible only inside the block in which they are declared/initialized.  
+We can't access them outside the block.  
 
-##### 9.3 Shadowing
+**9.3 Shadowing**  
 
 A variable shadows other variable of the same name which is defined in its parent scope.
 
-Example
-```
+Example  
+
+```javascript
 var c = 100;
 
 function x() {
@@ -578,11 +580,12 @@ x();
 console.log(c);
 ```
 
-**Illegal Shadowing**
+**Illegal Shadowing**  
 
-Following works,
-We can shadow `let` variables with `const` variables and vice versa.
-```
+Following works,  
+We can shadow `let` variables with `const` variables and vice versa.  
+
+```javascript
 let a = 99;
 
 {
@@ -600,9 +603,10 @@ let b = 11;
 console.log(b);
 ```
 
-But following gives an error,
+But following gives an error,  
 `Uncaught SyntaxError: Identifier 'a' has already been declared`
-```
+
+```javascript
 let a = 99;
 
 {
@@ -611,21 +615,23 @@ let a = 99;
 
 console.log(a);
 ```
-We can't shadow `let`/`const` variables with `var` variables.
 
-The reason is - variables declared with `var` keyword have global scope,
-because they are attached to Global object (`window`/`this`).
+We can't shadow `let`/`const` variables with `var` variables.  
 
-So when a variable declared using `let`/`const` is re-declared using `var`,
-we get the error - `Uncaught SyntaxError: Identifier 'a' has already been declared`.
+The reason is - variables declared with `var` keyword have global scope,  
+because they are attached to Global object (`window`/`this`).  
 
-Here the scope of a variable redeclared using `var` overlaps with the one declared using `let`/`const`.
-And that is why we get "SyntaxError".
+So when a variable declared using `let`/`const` is re-declared using `var`,  
+we get the error - `Uncaught SyntaxError: Identifier 'a' has already been declared`.  
 
-Check the Source tab in the browser console.
+Here the scope of a variable redeclared using `var` overlaps with the one declared using `let`/`const`.  
+And that is why we get "SyntaxError".  
 
-Following works,
-```
+Check the Source tab in the browser console.  
+
+Following works,  
+
+```javascript
 let a = 99;
 
 function abc() {
@@ -634,15 +640,16 @@ function abc() {
 
 console.log(a);
 ```
-Because variable `a` declared inside the function `abc()` is allocated memory in the function's execution context.
-Its scope is limited to that function only.
+
+Because variable `a` declared inside the function `abc()` is allocated memory in the function's execution context.  
+Its scope is limited to that function only.  
 Whereas variable `a` declared with `let` is allocated memory in the different location.
-So it works.
+So it works.  
 
-But we can shadow `var` variables with `let`/`const` variables.
-So following works,
+But we can shadow `var` variables with `let`/`const` variables.  
+So following works,  
 
-```
+```javascript
 var a = 99;
 
 {
