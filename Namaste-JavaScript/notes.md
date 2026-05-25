@@ -667,7 +667,7 @@ var b = 88;
 console.log(b);
 ```
 
-> Scope works the same in regular functions and arrow functions.
+> Scope works the same in regular functions and arrow functions.  
 > There is no difference.
 
 ---
