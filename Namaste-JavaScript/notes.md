@@ -368,6 +368,7 @@ In case when we assign an object to a const variable, it holds reference to that
 
 | Action | `var` | `let` | `const` |
 | --- | --- | --- | --- |
+| Access before declaration/initialization | Works | Gives error because it is in TDZ | Gives error because it is in TDZ | 
 | Re-declaration | Allowed | Not Allowed | Not Allowed |
 | Re-assignment | Allowed | Allowed | Not Allowed |
 
