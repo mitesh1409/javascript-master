@@ -329,7 +329,7 @@ Yes, `let` and `const` declarations are hoisted.
 But they are hoisted differently then the `var` declarations.  
 
 Variables declared with `var`, `let` or `const` are assigned memory  
-and initialized with `undefined` by default in the "memory creation" phase.  
+and initialized with `undefined` by default in the "Memory Creation" phase.  
 
 Hoisting simply means memory allocation.  
 
