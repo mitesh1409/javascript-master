@@ -263,29 +263,32 @@ Even though JavaScript allows this, we should not do this.
 
 ## #7 The Scope Chain, 🔥 Scope & Lexical Environment | Namaste JavaScript Ep. 7
 
-Scope means the area/region where you can access a specific variable or a function.
+Scope means the area/region where you can access a specific variable or a function.  
 
-Scope is directly dependent on the **Lexical Environment**.
+Scope is directly dependent on the **Lexical Environment**.  
 
-Whenever a function is invoked its execution context is created.
-Along with execution context a lexical environment is also created.
+Whenever a function is invoked its execution context is created.  
+Along with execution context a lexical environment is also created.  
 
-What is a lexical environment?
-The lexical environment is the local memory along with the lexical environment of its parent.
+What is a lexical environment?  
+The lexical environment is the local memory along with the lexical environment of its parent.  
 
-Lexical as a term means in heirarchy or in a sequence.
+Lexical Environment  
+Lexical as a term means in heirarchy or in a sequence.  
+Lexical Environment = Current Environment + Chain of all the Parent Environments (in heirarchy)  
 
-Lexical Environment = Local Memory + Reference to the Lexical Environment its parent
+Lexical Environment = Local Memory + Reference to the Lexical Environment of its parent  
 
-In case of the Global Execution context, reference to the Lexical Environment is null.
-So scope chain ends at the Global Execution context.
+In case of the Global Execution context, reference to the Lexical Environment is null.  
+So scope chain ends at the Global Execution context.  
 
-What is Scope Chain?
-Chain of all the lexical environments and the parent references is known as Scope Chain.
+What is Scope Chain?  
+Chain of all the lexical environments and the parent references is known as Scope Chain.  
+Chain of all the scopes in a parent-child heirarchy.  
 
 Example
 
-```
+```javascript
 function a() {
   var b = 10;
 
