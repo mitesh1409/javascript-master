@@ -520,7 +520,7 @@ Read article - [ES2015 `const` is not about immutability](https://mathiasbynens.
 
 ---
 
-## #9 BLOCK SCOPE & Shadowing in JS 🔥| Namaste JavaScript 🙏 Ep. 9
+## #9 Block Scope & Shadowing in JS 🔥| Namaste JavaScript 🙏 Ep. 9
 
 **9.1 What is a Block?**  
 
