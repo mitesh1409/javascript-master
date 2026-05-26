@@ -672,16 +672,17 @@ console.log(b);
 
 ---
 
-#### #10 Closures in JS 🔥 | Namaste JavaScript Ep. 10
+## #10 Closures in JS 🔥 | Namaste JavaScript Ep. 10
 
-##### 10.1 What is a Closure?
+**10.1 What is a Closure?**  
 
 A function along with its lexical scope is called the closure.
 
 [MDN Docs | Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
-Code Example 1
-```
+Code Example 1  
+
+```javascript
 function init() {
   var name = 'Mozilla'; // name is a local variable created by init
   function displayName() {
@@ -693,8 +694,9 @@ function init() {
 init();
 ```
 
-Code Example 2
-```
+Code Example 2  
+
+```javascript
 function makeFunc() {
   const name = 'Mozilla';
   function displayName() {
@@ -707,17 +709,18 @@ const myFunc = makeFunc();
 myFunc();
 ```
 
-##### 10.2 How we can use a function in JavaScript?
+**10.2 How we can use a function in JavaScript?**  
 
 We can use a function in the following ways:
 - We can assign a function to a variable
 - We can pass a function as an argument to another function
 - We can return a function from another function
 
-##### 10.3 Some Code Examples
+**10.3 Some Code Examples**  
 
-Code Example 1
-```
+Code Example 1  
+
+```javascript
 function greet() {
   var message = 'Hello :)';
 
@@ -731,8 +734,9 @@ let greetHere = greet();
 greetHere();
 ```
 
-Code Example 2
-```
+Code Example 2  
+
+```javascript
 function greet() {
     var message = 'Hello :)';
 
@@ -750,8 +754,9 @@ let greetHere = greet();
 greetHere();
 ```
 
-Code Example 3
-```
+Code Example 3  
+
+```javascript
 function z() {
     let a = 100;
 
@@ -771,8 +776,9 @@ console.log(z()());
 z()()();
 ```
 
-Code Example 4
-```
+Code Example 4  
+
+```javascript
 function relay() {
     let relayed = false;
 
@@ -797,8 +803,9 @@ console.log(relaySecretMessage()); // this returns an error message
 console.log(relaySecretMessage()); // this returns an error message
 ```
 
-Code Example 5
-```
+Code Example 5  
+
+```javascript
 function play() {
     // Assume that there is an API which returns/delivers a message one time only,
     // once it is returned/delivered it is marked as delivered and then it won't be
@@ -826,7 +833,7 @@ const playSecretMessage = play();
 playSecretMessage();
 ```
 
-##### 10.4 Uses of Closures
+**10.4 Uses of Closures**  
 
 Following are the use cases of Closures
 - Module Design Pattern
