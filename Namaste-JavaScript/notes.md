@@ -13,7 +13,7 @@
 
 ## #1 How JavaScript Works 🔥 & Execution Context | Namaste JavaScript Ep.1
 
-**1.1 Execution Context**
+### 1.1 Execution Context
 
 Execution Context is the first core fundamental.  
 > Everything in JavaScript  
@@ -32,7 +32,7 @@ Execution Context has two components:
 
 By default, all the JavaScript code executes in the "Global Execution Context".
 
-**1.2 Synchronous & Single Threaded**
+### 1.2 Synchronous & Single Threaded
 
 > JavaScript is a  
 > Synchronous  
@@ -49,7 +49,7 @@ in a specific order (means it can go to the next line once the current line fini
 
 ## #2 How JavaScript Code is executed? ❤️ & Call Stack | Namaste JavaScript Ep. 2
 
-**2.1 How the Execution Context is created**
+### 2.1 How the Execution Context is created
 
 Remember - Everything in JavaScript happens inside an "Execution Context".
 
@@ -68,7 +68,7 @@ Execution Context is created in 2 phases:
 - Code Execution  
   JavaScript executes the code line by line from top to bottom.  
 
-**2.2 Function Invocation & Execution**
+### 2.2 Function Invocation & Execution
 
 During the execution, when JavaScript encounters a function name along with its  
 parameters inside paranthesis, it invokes that function and starts executing it.
@@ -82,7 +82,7 @@ As soon as the function finishes its execution, its "Execution Context" is delet
 
 Similarly when all the JavaScript code finishes its execution, "Global Execution Context" is deleted.  
 
-**2.3 Call Stack in JavaScript**
+### 2.3 Call Stack in JavaScript
 
 There can be multiple "Execution Contexts" for a JavaScript code,  
 there can be multiple levels of nesting as well.  
@@ -110,7 +110,7 @@ Other names of the Call Stack in JavaScript are:
 
 ## #3 Hoisting in JavaScript 🔥(variables & functions) | Namaste JavaScript Ep. 3
 
-**3.1 Variable and Function Hoisting in JavaScript**
+### 3.1 Variable and Function Hoisting in JavaScript
 
 JavaScript allows to access variables and functions even before they are defined/declared or set.  
 This is called Variable and Function Hoisting in JavaScript.  
@@ -124,7 +124,7 @@ All functions are allocated memory and they store their whole code/body.
 
 This is how variables and functions are available for use even before their definition/declaration.  
 
-Play with the following code to get the exact idea about Variable and Function Hoisting:  
+### 3.2 Code Example
 
 ```javascript
 // Put a break-point here and analyse call stack, scope etc.
@@ -165,6 +165,8 @@ console.log(sayHello);
 
 ## #4 How functions work in JS ❤️ & Variable Environment | Namaste JavaScript Ep. 4
 
+### 4.1 Code Example
+
 Run the following code in the browser, check the different execution contexts and call stack.
 
 ```javascript
@@ -188,19 +190,19 @@ function b() {
 
 ## #5 SHORTEST JS Program 🔥 window & this keyword | Namaste JavaScript Ep. 5
 
-**5.1 Shortest JavaScript Program**  
+### 5.1 Shortest JavaScript Program
 
 The shortest JavaScript program is an empty JavaScript file.  
 JavaScript still executes that file, it creates the Global Execution Context and puts it inside the Call Stack.  
 It also creates the `window` object.  
 
-**5.2 `this` Points to `window` in the Global Execution Context**  
+### 5.2 `this` Points to `window` in the Global Execution Context
 
 In the "Global Execution Context", `this` equals to `window` (the Global object).  
 `this === window // gives true`  
 `this` points to the `window` object.  
 
-**5.3 Global Execution Context OR Global Space**  
+### 5.3 Global Execution Context OR Global Space
 
 What is Global Space?  
 OR  
@@ -228,13 +230,19 @@ console.log(points);
 
 ## #6 undefined vs not defined in JS 🤔 | Namaste JavaScript Ep. 6
 
+### 6.1 `undefined`
+
 `undefined` is a JavaScript keyword, it denotes a special value that is used as a placeholder  
 for the variable which is not assigned a value yet.  
 The variables are allocated memory and they hold a special value `undefined`  
 in the Memory Creation phase of the "Execution Context".  
 
+### 6.2 not defined
+
 "not defined error" means that the variable is not allocated memory in  
 the Memory Creation phase of the "Execution Context".  
+
+### 6.3 JavaScript is a **Loosely/Weakly Typed** Language
 
 JavaScript is a **Loosely/Weakly Typed** language.  
 The same variable can hold multiple types of values.  
@@ -250,6 +258,8 @@ a = 'Hello :)'
 console.log(a);
 ```
 
+### 6.4 Do not assign `undefined` to a variable
+
 Assigning `undefined` to a variable is bad thing/bad practice in JavaScript. Never do this.  
 
 ```javascript
@@ -263,6 +273,8 @@ Even though JavaScript allows this, we should not do this.
 
 ## #7 The Scope Chain, 🔥 Scope & Lexical Environment | Namaste JavaScript Ep. 7
 
+### 7.1 Scope
+
 Scope means the area/region where you can access a specific variable or a function.  
 
 Scope is directly dependent on the **Lexical Environment**.  
@@ -270,7 +282,7 @@ Scope is directly dependent on the **Lexical Environment**.
 Whenever a function is invoked its execution context is created.  
 Along with execution context a lexical environment is also created.  
 
-**Lexical Environment**  
+### 7.2 Lexical Environment
 
 In JavaScript, lexical refers to the physical location of code in the source file —  
 so a function's lexical environment is determined by where it was written,  
@@ -285,11 +297,11 @@ Lexical Environment is a data structure created every time a function is invoked
 - an Environment Record — the variables, function declarations, and bindings that belong to the current scope
 - an `outer` reference — a pointer to the enclosing lexical environment, set at the time the function was *written* (not when it's called)
 
-**Scope Chain**  
+### 7.3 Scope Chain
 
 The linked list formed by following `outer` references from the current lexical environment up through every enclosing environment, all the way to the global environment (whose `outer` is `null`). When JavaScript resolves a variable name, it walks this chain — starting at the innermost environment and moving outward until it finds the binding or throws a `ReferenceError`.
 
-Example  
+### 7.4 Code Example
 
 ```javascript
 let ten = 10;
@@ -322,7 +334,7 @@ console.log(thirty); // thirty is not defined
 
 ## #8 let & const in JS, 🔥Temporal Dead Zone | Namaste JavaScript Ep. 8
 
-**8.1 Hoisting**  
+### 8.1 Hoisting
 
 Are `let` and `const` declarations hoisted?  
 Yes, `let` and `const` declarations are hoisted.  
@@ -338,7 +350,7 @@ Hoist = to lift or pull something up, often by using ropes, etc.
 So we can imagine that the JavaScript engine pulls all variable and function declarations
 from the code and allocates memory to them.  
 
-**8.2 Attachement with global object**  
+### 8.2 Attachement with global object
 
 Variables declared with `var` are attached to the global object (`Window`/`this`).  
 They are visible under "Global".  
@@ -347,18 +359,18 @@ Variables declared with `let`/`const` are not attached to the global object (`Wi
 they are stored in a different memory space then global.  
 They are visible under "Script".  
 
-**8.3 Temporal Dead Zone**  
+### 8.3 Temporal Dead Zone
 
 What is a Temporal Dead Zone?  
 For the time being let and const declarations may be in the **Temporal Dead Zone**.
 The variable declared with either `let` or `const` is said to be in the **Temporal Dead Zone** until its initialized.
 
-**8.4 Re-declaration**  
+### 8.4 Re-declaration
 
 We cannot re-declare variables which are already declared using `let`/`const`.  
 Whereas we can re-declare the same variables which are already declared using `var`.  
 
-**8.5 More about const variables**  
+### 8.5 More about const variables
 
 `const` variables must be initialized when they are declared.
 
@@ -372,7 +384,7 @@ In case when we assign an object to a const variable, it holds reference to that
 | Re-declaration | Allowed | Not Allowed | Not Allowed |
 | Re-assignment | Allowed | Allowed | Not Allowed |
 
-Example  
+### 8.6 Code Example
 
 ```javascript
 // We need a super hero to start with.
@@ -411,7 +423,7 @@ superHero = {
 };
 ```
 
-**8.6 SyntaxError vs. ReferenceError vs. TypeError**  
+### 8.7 SyntaxError vs. ReferenceError vs. TypeError
 
 **ReferenceError**  
 
@@ -503,7 +515,7 @@ const pi = 3.14;
 pi = 3.15;
 ```
 
-**8.7 `var`, `let`, `const` what to use?**  
+### 8.8 `var`, `let`, `const` what to use?
 
 **Thumbrules for using `var`, `let` & `const`**  
 
@@ -522,7 +534,7 @@ Read article - [ES2015 `const` is not about immutability](https://mathiasbynens.
 
 ## #9 Block Scope & Shadowing in JS 🔥| Namaste JavaScript 🙏 Ep. 9
 
-**9.1 What is a Block?**  
+### 9.1 What is a Block?
 
 Block is defined by two curly braces `{}`.  
 The code between these two curly braces is called a Block.  
@@ -531,7 +543,7 @@ It can have one or more lines of code.
 Block is also known as a **compound statement**.  
 Block is used to combine multiple lines of code into a group.  
 
-**9.2 What is a Block Scope?**  
+### 9.2 What is a Block Scope?
 
 Block scope means what all the variables and functions we can access inside the block.
 
@@ -557,7 +569,7 @@ and they are inside the Block memory space.
 this means they are accessible only inside the block in which they are declared/initialized.  
 We can't access them outside the block.  
 
-**9.3 Shadowing**  
+### 9.3 Shadowing
 
 A variable shadows other variable of the same name which is defined in its parent scope.
 
@@ -674,7 +686,7 @@ console.log(b);
 
 ## #10 Closures in JS 🔥 | Namaste JavaScript Ep. 10
 
-**10.1 What is a Closure?**  
+### 10.1 What is a Closure?
 
 A function along with its lexical scope is called the closure.
 
@@ -709,14 +721,14 @@ const myFunc = makeFunc();
 myFunc();
 ```
 
-**10.2 How we can use a function in JavaScript?**  
+### 10.2 How we can use a function in JavaScript?
 
 We can use a function in the following ways:
 - We can assign a function to a variable
 - We can pass a function as an argument to another function
 - We can return a function from another function
 
-**10.3 Some Code Examples**  
+### 10.3 Some Code Examples
 
 Code Example 1  
 
@@ -833,7 +845,7 @@ const playSecretMessage = play();
 playSecretMessage();
 ```
 
-**10.4 Uses of Closures**  
+### 10.4 Uses of Closures
 
 Following are the use cases of Closures
 - Module Design Pattern
@@ -848,10 +860,11 @@ Following are the use cases of Closures
 
 ---
 
-#### #11 setTimeout + Closures Interview Question 🔥 | Namaste 🙏 JavaScript Ep. 11
+## #11 setTimeout + Closures Interview Question 🔥 | Namaste 🙏 JavaScript Ep. 11
 
-Code Example 1
-```
+**Code Example #1**  
+
+```javascript
 console.log("script starts");
 
 setTimeout(() => console.log("setTimeout"), 0);
@@ -863,18 +876,19 @@ Promise
 console.log("script ends");
 ```
 
-`setTimeout` is not the part of the JavaScript, it is the part of Web APIs/Browsers.
-It runs after the complete code in our JavaScript file has ran successfully, even if the value of timeout argument is 0.
+`setTimeout` is not a part of the JavaScript, but it is a part of the Web APIs/Browsers platform.  
+It runs after the complete code in our JavaScript file has ran successfully (at the end of synchronous code execution), even if the value of timeout argument is 0.  
 This will go inside "Task Queue".
 
-`Promise` runs at the end as well.
-`Promise` goes inside "Microtask Queue" or "Priority Queue".
+`Promise` runs at the end as well.  
+`Promise` goes inside "Microtask Queue" or "Priority Queue".  
 
 "Microtask Queue" or "Priority Queue" gets priority over the "Task Queue".
 
 So the `Promise` gets priority over `setTimeout`.
 
-Output
+**Output**  
+
 ```
 script starts
 script ends
@@ -884,8 +898,9 @@ setTimeout
 
 ---
 
-Code Example 2
-```
+**Code Example #2**  
+
+```javascript
 function loop() {
     let counter = 10;
 
@@ -900,8 +915,10 @@ function loop() {
 loop();
 ```
 
-Output
-It prints "Namaste 🙏 JavaScript" first, then "counter in loop function 10" and then (after 5 seconds) "counter in setTimeout callback 10".
+**Output**  
+
+It prints "Namaste 🙏 JavaScript" first, then "counter in loop function 10" and then (after 5 seconds) "counter in setTimeout callback 10".  
+
 ```
 Namaste 🙏 JavaScript
 counter in loop function 10
@@ -910,8 +927,9 @@ counter in setTimeout callback 10
 
 ---
 
-Code Example 3
-```
+**Code Example #3**  
+
+```javascript
 function loop() {
     let counter;
 
@@ -928,8 +946,10 @@ function loop() {
 loop();
 ```
 
-Output
+**Output**  
+
 It prints 6 five times.
+
 ```
 Namaste 🙏 JavaScript
 counter in loop function 6
@@ -940,13 +960,14 @@ counter in setTimeout callback 6
 counter in setTimeout callback 6
 ```
 
-Here the scope of `counter` variable is the entire `loop` function.
+Here the scope of `counter` variable is the entire `loop` function.  
 So all the setTimeout callbacks get the same copy of the `counter` variable.
 
 ---
 
-Code Example 4
-```
+**Code Example #4**  
+
+```javascript
 function loop() {
     let x = 100;
 
@@ -966,8 +987,10 @@ function loop() {
 loop();
 ```
 
-Output
+**Output**  
+
 Prints 1, 2, 3, 4, 5 and gives the error "counter is not defined" at line xx.
+
 ```
 Namaste 🙏 JavaScript
 x 105
@@ -979,22 +1002,23 @@ counter in setTimeout callback 4 x 105
 counter in setTimeout callback 5 x 105
 ```
 
-Here the scope of `counter` variable is "for loop" block only.
-It won't be accessible outside the "for loop" block that is why we get 
-the error "counter is not defined" at line xx.
-And for each of the setTimeout callbacks we get a separate block copy of the `counter` variable
-at the time it is set or put into the "Task Queue".
+Here the scope of `counter` variable is "for loop" block only.  
+It won't be accessible outside the "for loop" block that is why we get  
+the error "counter is not defined" at line x.  
+And for each of the setTimeout callbacks we get a separate block copy of the `counter` variable  
+at the time it is set or put into the "Task Queue".  
 
-The correct explaination may be this -
-Each of the setTimeout callbacks 
-- forms a closure with its parents
-- is put into the "Task Queue", so it will be executed later (asynchronously)
-- remembers `counter` variable with its value at the time it was set or put into the "Task Queue"
+The correct explaination may be this -  
+Each of the setTimeout callbacks  
+- forms a closure with its parents  
+- is put into the "Task Queue", so it will be executed later (asynchronously)  
+- remembers `counter` variable with its value at the time it was set or put into the "Task Queue"  
 
 ---
 
-Code Example 5
-```
+**Code Example #5**  
+
+```javascript
 function loop() {
     for (var counter = 1; counter <= 5; counter++) {
         setTimeout(function () {
@@ -1009,10 +1033,13 @@ function loop() {
 loop();
 ```
 
-Output
+**Output**  
+
 It prints 6 five times.
+
 ```
-6
+Namaste 🙏 JavaScript
+counter 6
 6
 6
 6
@@ -1020,13 +1047,16 @@ It prints 6 five times.
 6
 ```
 
-Here each of the setTimeout callbacks forms a closure with its parents.
+Here each of the setTimeout callback forms a closure with its parent.  
 But since `counter` is declared with `var`, its scope is the entire `loop` function,
-it doesn't have the block scope.
-That is why each of the setTimeout callbacks gets the same copy of the `counter` variable.
+it doesn't have the block scope.  
+That is why each of the setTimeout callbacks gets the same copy of the `counter` variable.  
 
-Code Example 6
-```
+---
+
+**Code Example #6**  
+
+```javascript
 function loop() {
     for (var i = 1; i <= 5; i++) {
         function count(counter) {
@@ -1045,7 +1075,8 @@ function loop() {
 loop();
 ```
 
-Output
+**Output**  
+
 ```
 Namaste 🙏 JavaScript
 counter 6
@@ -1058,7 +1089,7 @@ counter 6
 
 ---
 
-#### #12 CRAZY JS INTERVIEW 🤯 ft. Closures | Namaste 🙏 JavaScript Ep. 12
+## #12 CRAZY JS INTERVIEW 🤯 ft. Closures | Namaste 🙏 JavaScript Ep. 12
 
 ##### 12.1 What is a closure in JavaScript?
 
@@ -1066,12 +1097,12 @@ counter 6
 
 Disadvantages of closures
 
-Over consumption of memory
-Every time a closure is formed it consumes a lot of memory
-since variables and functions that are part of closure are
-not garbage collected. They remain in memory till the program
-finishes its execution.
-So if not handled/used properly it can lead to memory leaks.
+Over consumption of memory  
+Every time a closure is formed it consumes a lot of memory  
+since variables and functions that are part of closure are  
+not garbage collected. They remain in memory till the program  
+finishes its execution.  
+So if not handled/used properly it can lead to memory leaks.  
 
 ##### 12.2 What is a garbage collector in JavaScript?
 
