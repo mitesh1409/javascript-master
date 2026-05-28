@@ -862,7 +862,7 @@ Following are the use cases of Closures
 
 ## #11 setTimeout + Closures Interview Question 🔥 | Namaste 🙏 JavaScript Ep. 11
 
-**Code Example #1**  
+### 11.1 Code Example #1
 
 ```javascript
 console.log("script starts");
@@ -896,9 +896,7 @@ Promise
 setTimeout
 ```
 
----
-
-**Code Example #2**  
+### 11.2 Code Example #2
 
 ```javascript
 function loop() {
@@ -925,9 +923,7 @@ counter in loop function 10
 counter in setTimeout callback 10
 ```
 
----
-
-**Code Example #3**  
+### 11.3 Code Example #3
 
 ```javascript
 function loop() {
@@ -963,9 +959,7 @@ counter in setTimeout callback 6
 Here the scope of `counter` variable is the entire `loop` function.  
 So all the setTimeout callbacks get the same copy of the `counter` variable.
 
----
-
-**Code Example #4**  
+### 11.4 Code Example #4
 
 ```javascript
 function loop() {
@@ -1014,9 +1008,7 @@ Each of the setTimeout callbacks
 - is put into the "Task Queue", so it will be executed later (asynchronously)  
 - remembers `counter` variable with its value at the time it was set or put into the "Task Queue"  
 
----
-
-**Code Example #5**  
+### 11.5 Code Example #5
 
 ```javascript
 function loop() {
@@ -1052,9 +1044,7 @@ But since `counter` is declared with `var`, its scope is the entire `loop` funct
 it doesn't have the block scope.  
 That is why each of the setTimeout callbacks gets the same copy of the `counter` variable.  
 
----
-
-**Code Example #6**  
+### 11.6 Code Example #6
 
 ```javascript
 function loop() {
@@ -1091,7 +1081,7 @@ counter 6
 
 ## #12 CRAZY JS INTERVIEW 🤯 ft. Closures | Namaste 🙏 JavaScript Ep. 12
 
-##### 12.1 What is a closure in JavaScript?
+### 12.1 What is a closure in JavaScript?
 
 [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
@@ -1104,7 +1094,12 @@ not garbage collected. They remain in memory till the program
 finishes its execution.  
 So if not handled/used properly it can lead to memory leaks.  
 
-##### 12.2 What is a garbage collector in JavaScript?
+@todo
+counter using closure
+
+scalable example using constructor function
+
+### 12.2 What is a garbage collector in JavaScript?
 
 Garbage collector is a program in the browser/JavaScript engine which frees up
 unutilized memory.
@@ -1115,7 +1110,7 @@ like JavaScript we have garbage collector which frees up the memory.
 
 How closures and garbage collector related to each other?
 
-```
+```javascript
 function level1() {
   let one = 1; // can't be garbage collected until level2()'s execution is over.
   let x = 99; // this is garbage collected smartly by some modern browsers.
@@ -1136,15 +1131,15 @@ level2Call();
 
 ---
 
-#### #13 FIRST CLASS FUNCTIONS 🔥 ft. Anonymous Functions | Namaste JavaScript Ep. 13
+## #13 FIRST CLASS FUNCTIONS 🔥 ft. Anonymous Functions | Namaste JavaScript Ep. 13
 
-##### 13.1 What is an Anonymous function?
+### 13.1 What is an Anonymous function?
 
-Functions without name/identity are called Anonymous functions.
-Arrow functions are anonymous functions.
-Functions with name/identity are regular/normal functions.
+Functions without name/identity are called Anonymous functions.  
+Arrow functions are anonymous functions.  
+Functions with name/identity are regular/normal functions.  
 
-```
+```javascript
 // Regular/normal/named function
 function greet() {
     return 'Hello! How are you? :)';
@@ -1164,17 +1159,17 @@ function() {
 // So JavaScript fails to parse it and gives the error.
 ```
 
-Anonymous functions are used when the functions are used as values.
+Anonymous functions are used when the functions are used as values.  
 
-An anonymous function can't live on its own.
-There are two ways we can use anonymous function
-1. IIFE
+An anonymous function can't live on its own.  
+There are two ways we can use anonymous function  
+1. IIFE (Immediately Invoked Function Expression) - Declare + Execute
 2. Storing it in a variable and then we can call it via that variable
 
 Ref: [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
 "Dog Balls ;)"
 
-```
+```javascript
 // Calling/using Anonymous function - by IIFE.
 
 // IIFE = Immediately Invoked Function Expression
@@ -1207,13 +1202,13 @@ const greet = function() {
 console.log(greet());
 ```
 
-##### 13.2 Function Statement, Function Expression, Function Declaration
+### 13.2 Function Statement, Function Expression, Function Declaration
 
 **Function Statement/Function Declaration**
 
 Ref: [Function Declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
 
-```
+```javascript
 function calcRectArea(width, height) {
   return width * height;
 }
@@ -1222,11 +1217,11 @@ console.log(calcRectArea(5, 6));
 // expected output: 30
 ```
 
-The way we defined function like this is called "Function Statement".
+The way we defined function like this is called "Function Statement".  
 
-The "function" declaration defines a function with the specified parameters.
+The "function" declaration defines a function with the specified parameters.  
 
-It has 3 parts
+It has 3 parts  
 - name (mandatory)
   The function name.
 - parameters (optional)
@@ -1234,15 +1229,15 @@ It has 3 parts
 - statements (optional)
   They comprise the body of the function.
 
-So these are the regular named functions.
+So these are the regular named functions.  
 
-Function Statement & Function Declaration are the same thing.
+Function Statement & Function Declaration are the same thing.  
 
-**Function Expression**
+**Function Expression**  
 
 Ref: [Function Expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
 
-```
+```javascript
 const calcCircleArea = function(radius) {
   return Math.PI * Math.pow(radius, 2);
 };
@@ -1250,13 +1245,13 @@ const calcCircleArea = function(radius) {
 console.log(calcCircleArea(5));
 ```
 
-The way we defined function like this is called "Function Expression".
+The way we defined function like this is called "Function Expression".  
 
-Here function acts like a value, we can assign it to a variable.
+Here function acts like a value, we can assign it to a variable.  
 
-The "function" keyword can be used to define a function inside an expression.
+The "function" keyword can be used to define a function inside an expression.  
 
-It has 3 parts
+It has 3 parts  
 - name (optional)
   The function name. Can be omitted, in which case the function is anonymous. The name is only local to the function body. This means we can't access named function elsewhere.
 - parameters (optional)
@@ -1264,23 +1259,23 @@ It has 3 parts
 - statements (optional)
   They comprise the body of the function.
 
-So this can be either anonymous function or regular function assigned to a variable.
+So this can be either anonymous function or regular function assigned to a variable.  
 
 A function expression is very similar to and has almost the same syntax as a function declaration (see function statement for details). The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions.
 
 A function expression can be used as an IIFE (Immediately Invoked Function Expression) which runs as soon as it is defined.
 
-Function Statement Vs Function Expression
+Function Statement Vs Function Expression  
 
-Function Statement and Function Expression are ways to define a function.
+Function Statement and Function Expression are ways to define a function.  
 
 The major difference is hoisting.
 
-In the memory creation phase functions declared with Function Statement are
+In the memory creation phase functions declared with Function Statement are  
 allocated memory.
-But functions declared with Function Expression are not allocated any memory.
+But functions declared with Function Expression are not allocated any memory.  
 
-```
+```javascript
 // calcRectArea is hoisted in memory so we can call it before its declaration.
 console.log(calcRectArea(5, 6));
 
@@ -1298,31 +1293,32 @@ const calcCircleArea = function(radius) {
 };
 ```
 
-**Named Function Expression**
+**Named Function Expression**  
 
 Ref: [Named Function Expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function#named_function_expression)
 
-```
+```javascript
 const calcCircleArea = function circleArea(radius) {
   return Math.PI * Math.pow(radius, 2);
 };
 
 console.log(calcCircleArea(5));
+circleArea(5); // Uncaught ReferenceError: circleArea is not defined
 ```
 
-Named Function Expressions are just Function Expressions that use
+Named Function Expressions are just Function Expressions that use  
 named functions/regular functions instead of anonymous functions.
 
-The function name is only local to the function body.
-This means we can't access named function elsewhere.
+The function name is only local to the function body.  
+This means we can't access named function elsewhere.  
 
-This is because when we declare a named function,
-it is allocated memory first in the memory allocation phase,
-so later on in the code execution phase it is available, even inside its own body.
-This is the reason it is possible to write recursive functions.
-This concept is the same as in other languages.
+This is because when we declare a named function,  
+it is allocated memory first in the memory allocation phase,  
+so later on in the code execution phase it is available, even inside its own body.  
+This is the reason it is possible to write recursive functions.  
+This concept is the same as in other languages.  
 
-```
+```javascript
 // We can access the function itself inside its own body when it is executed.
 
 // Example 1: Function Expression
@@ -1353,17 +1349,17 @@ This is because in the memory creation phase,
   used as a value in the function expression. That is why it can't be accessed as a function.
   Here "circleArea" is used as a function value and not a function itself.
 
-And then in the code execution phase,
+And then in the code execution phase,  
 - when "calcCircleArea" is called, it executes "circleArea" function.
 - the name of the function is local to the function body so we can access it inside the body.
 
-**Function Parameters Vs Function Arguments**
+### 13.3 Function Parameters Vs Function Arguments
 
-The labels/identifiers we take inside the function while declaring it are called "parameters".
-The values which we passed in the function call are known as "arguments".
-These arguments are then assigned to the parameters.
+The labels/identifiers we take inside the function while declaring it are called "parameters".  
+The values which we passed in the function call are known as "arguments".  
+These arguments are then assigned to the parameters.  
 
-```
+```javascript
 // width, height <- parameters
 function calcRectArea(width, height) {
   return width * height;
@@ -1373,25 +1369,25 @@ function calcRectArea(width, height) {
 calcRectArea(5, 10);
 ```
 
-##### 13.3 What are First Class Functions?
+### 13.4 What are First Class Functions?
 
 [First Class Functions](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
 
-A programming language is said to have First-class functions
+A programming language is said to have First-class functions  
 when functions in that language are treated like any other variable.
 
-For example, in such a language,
+For example, in such a language,  
 - a function can be passed as an argument to other functions
 - can be returned by another function
 - can be assigned as a value to a variable
 
-The ability to use functions as values is known as First Class functions.
+The ability to use functions as values is known as "First Class Functions".
 
-In JavaScript we have First Class functions.
+In JavaScript we have "First Class Functions".
 
 In JavaScript, functions are "First Class Citizens".
 
-##### 13.4 Arrow Functions
+### 13.5 Arrow Functions
 
 Ref: [Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
