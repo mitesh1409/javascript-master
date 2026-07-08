@@ -15,58 +15,7 @@
 9. [Block Scope & Shadowing in JS 🔥| Namaste JavaScript 🙏 Ep. 9](./1783496433925.md)
 10. [Closures in JS 🔥 | Namaste JavaScript Ep. 10](./1783496954865.md)
 11. [setTimeout + Closures Interview Question 🔥 | Namaste 🙏 JavaScript Ep. 11](./1783498977832.md)
-
-
-## #12 CRAZY JS INTERVIEW 🤯 ft. Closures | Namaste 🙏 JavaScript Ep. 12
-
-### 12.1 What is a closure in JavaScript?
-
-[Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
-
-Disadvantages of closures
-
-Over consumption of memory  
-Every time a closure is formed it consumes a lot of memory  
-since variables and functions that are part of closure are  
-not garbage collected. They remain in memory till the program  
-finishes its execution.  
-So if not handled/used properly it can lead to memory leaks.  
-
-@todo - counter using closure
-
-scalable example using constructor function
-
-### 12.2 What is a garbage collector in JavaScript?
-
-Garbage collector is a program in the browser/JavaScript engine which frees up
-unutilized memory.
-
-In lower level languages like C, C++ its developer's responsibility
-to allocate and deallocate memory, but in higher level languages
-like JavaScript we have garbage collector which frees up the memory.
-
-How closures and garbage collector related to each other?
-
-```javascript
-function level1() {
-  let one = 1; // can't be garbage collected until level2()'s execution is over.
-  let x = 99; // this is garbage collected smartly by some modern browsers.
-
-  return function level2() {
-    let two = 2;
-
-    console.log(one, two);
-  }
-}
-
-const level2Call = level1();
-// after this call x is garbage collected smartly by some modern browsers
-// this is because it is not used anywhere.
-
-level2Call();
-```
-
----
+12. [CRAZY JS INTERVIEW 🤯 ft. Closures | Namaste 🙏 JavaScript Ep. 12](./1783506335936.md)
 
 ## #13 FIRST CLASS FUNCTIONS 🔥 ft. Anonymous Functions | Namaste JavaScript Ep. 13
 
