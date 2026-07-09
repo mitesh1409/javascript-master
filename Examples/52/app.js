@@ -1,25 +1,25 @@
-// // Example #1
+// Example #1
 
-// function counter() {
-//     let count = 0;
+function counter() {
+    let count = 0;
 
-//     return function incrementCount() {
-//         return count += 1;
-//     }
-// }
+    return function incrementCount() {
+        return count += 1;
+    }
+}
 
-// let counterOne = counter();
-// let counterTwo = counter();
+let counterOne = counter();
+let counterTwo = counter();
 
-// console.log(`counterOne ${counterOne()}`);
-// console.log(`counterOne ${counterOne()}`);
-// console.log(`counterOne ${counterOne()}`);
-// console.log(`counterOne ${counterOne()}`);
-// console.log(`counterOne ${counterOne()}`);
+console.log(`counterOne ${counterOne()}`);
+console.log(`counterOne ${counterOne()}`);
+console.log(`counterOne ${counterOne()}`);
+console.log(`counterOne ${counterOne()}`);
+console.log(`counterOne ${counterOne()}`);
 
-// console.log(`counterTwo ${counterTwo()}`);
-// console.log(`counterTwo ${counterTwo()}`);
-// console.log(`counterTwo ${counterTwo()}`);
+console.log(`counterTwo ${counterTwo()}`);
+console.log(`counterTwo ${counterTwo()}`);
+console.log(`counterTwo ${counterTwo()}`);
 
 // // Example #2
 

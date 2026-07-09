@@ -4,7 +4,7 @@
 
 **Index**  
 
-1. [How JavaScript Works 🔥 & Execution Context | Namaste JavaScript Ep.1](./1783441301332.md)
+1. [How JavaScript Works 🔥 & Execution Context | Namaste JavaScript Ep. 1](./1783441301332.md)
 2. [How JavaScript Code is executed? ❤️ & Call Stack | Namaste JavaScript Ep. 2](./1783441519079.md)
 3. [Hoisting in JavaScript 🔥(variables & functions) | Namaste JavaScript Ep. 3](./1783442034972.md)
 4. [How functions work in JS ❤️ & Variable Environment | Namaste JavaScript Ep. 4](./1783443099476.md)
@@ -18,140 +18,9 @@
 12. [CRAZY JS INTERVIEW 🤯 ft. Closures | Namaste 🙏 JavaScript Ep. 12](./1783506335936.md)
 13. [FIRST CLASS FUNCTIONS 🔥 ft. Anonymous Functions | Namaste JavaScript Ep. 13](./1783510193465.md)
 14. [Callback Functions in JS ft. Event Listeners 🔥| Namaste JavaScript Ep. 14](./1783516149449.md)
-15. [Asynchronous JavaScript & EVENT LOOP from scratch 🔥 | Namaste JavaScript Ep.15](./1783528218140.md)
+15. [Asynchronous JavaScript & EVENT LOOP from scratch 🔥 | Namaste JavaScript Ep. 15](./1783528218140.md)
+16. [JS Engine EXPOSED 🔥 Google's V8 Architecture 🚀 | Namaste JavaScript Ep. 16](./1783592482121.md)
 
-
-#### #16 JS Engine EXPOSED 🔥 Google's V8 Architecture 🚀 | Namaste JavaScript Ep. 16
-
-##### #16.1 JavaScript Runtime Environment
-
-JavaScript Runtime Environment is like a big container which has everything to run JavaScript.
-
-JavaScript Runtime Environment has
-- JavaScript Engine
-- Set of APIs to Connect to Outer Environment
-- Event Loop
-- Callback/Task Queue
-- Micro-Task Queue
-
-JavaScript Engine is the main thing/heart of the JavaScript Runtime Environment.
-
-##### #16.2 Browser and Node.js Runtime
-
-Browser and Node.js has JavaScript Runtime Environment, that is why they are able to run JavaScript.
-
-Because of JavaScript Runtime Environment, we can run JavaScript wherever we want.
-
-JavaScript Runtime Environment has a set of APIs to connect to outer environment,
-it will change as per the platform where we run JavaScript.
-
-Like Node.js will have a separate set of APIs then the Browser.
-
-Browser is meant for client side applications so it will have a set of APIs
-accordingly in his JavaScript Runtime Environment.
-Node.js is meant for server side applications so it will have a set of APIs
-accordingly in his JavaScript Runtime Environment.
-
-##### #16.3 List of JavaScript Engines
-
-All browsers have their own JavaScript Engines.
-
-| Browser/Platform | JavaScript Engine |
-| ----------- | ----------- |
-| Microsoft Edge | Chakra |
-| Mozilla Firefox | SpiderMonkey |
-| Google Chrome | V8 |
-| Node.js | V8 |
-| Deno | V8 |
-| Deno | V8 |
-
-##### #16.4 First JavaScript Engine
-
-"SpiderMonkey" is the first JavaScript Engine created by the creator of JavaScript - Brendan Eich.
-
-##### #16.5 Myths About JavaScript Engine
-
-JavaScript Engine is not a hardware, it is a software.
-It is written in some lower level language.
-
-For example Google Chrome's JavaScript Engine V8 is written in C++.
-
-##### #16.6 JavaScript Engine Architecture
-
-JavaScript Code --> PARSING --> COMPILATION --> EXECUTION
-
-##### #16.7 Syntax Parsers & Abstract Syntax Tree
-
-JavaScript Code is passed to PARSING phase as input.
-
-PARSING
-During this phase, code is broken down into tokens.
-
-Syntax Parser
-It takes code and converts it into AST(Abstract Syntax Tree).
-
-Check with the help of the following tool:
-[AST Explorer](https://astexplorer.net)
-
-##### #16.8 Compilation & Execution of JavaScript Code
-
-COMPILATION
-Output of PARSING is then passed to COMPILATION phase.
-
-COMPILATION & EXECUTION go hand in hand.
-
-##### #16.9 JIT (Just In Time) Compilation
-
-JavaScript has JIT (Just In Time) Compilation.
-
-Is JavaScript interpreted or compiled language?
-
-Interpreter
-In interpreted languages the code is executed using an Interpreter.
-Interpreter executes code line by line from top to bottom.
-It doesn't know what can happen in the next line.
-
-Pros
-Execution is fast, immediately starts execution since there is no compilation phase.
-
-Compiler
-In compiled languages the code is compiled first and then executed.
-
-Pros
-Program is executed efficiently.
-
-##### #16.10 Is JavaScript interpreted or compiled language?
-
-Most of the modern JavaScript Engines uses an interpreter plus a compiler both together.
-So it depends on JavaScript Engine whether it uses purely an interpreter or JIT Compiler
-to run JavaScript.
-
-JIT Compiler = Interpreter + Compiler
-JIT Compiler uses both Interpreter & Compiler to execute JavaScript code.
-It compiles code at runtime that is why it is called JIT Compiler.
-
-##### #16.11 Garbage Collector - Mark & Sweep Algorithm
-
-Garbage Collector
-It tries to free-up memory whenever possible.
-It uses Mark & Sweep Algorithm to do this.
-
-Read more about Mark & Sweep Algorithm.
-
-Compiler does a lot of things behind the scenes to optimize the code
-- Inlining
-- Copy Elision
-- Inline Caching
-
-##### #16.12 Fastest JavaScript Engine
-
-Google Chrome's V8 is the fastest JavaScript Engine.
-
-V8 has an interpreter known as "Ignition", "Turbo Fan" optimizing compiler.
-
-##### #16.13 Google Chrome's V8 JavaScript Engine Architecture
-
----
 
 #### #17 TRUST ISSUES with setTimeout() | Namaste JavaScript Ep.17
 
