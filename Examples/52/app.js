@@ -77,9 +77,10 @@
 
 // console.log(counterTwo.value);
 
-const greet = function sayHello(name) {
-    console.log(sayHello); // the function itself is available since it is allocated memory before its execution
-    console.log(`Hello ${name} :)`);
-}
+console.log('Start');
 
-greet('Mitesh');
+setTimeout(function someCallback() {
+    console.log('setTimeout Callback executed :)');
+}, 10000);
+
+console.log('End');
