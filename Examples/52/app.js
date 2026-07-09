@@ -76,11 +76,3 @@
 // counterTwo.reset();
 
 // console.log(counterTwo.value);
-
-console.log('Start');
-
-setTimeout(function someCallback() {
-    console.log('setTimeout Callback executed :)');
-}, 10000);
-
-console.log('End');
