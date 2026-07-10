@@ -23,3 +23,4 @@
 17. [TRUST ISSUES with setTimeout() | Namaste JavaScript Ep. 17](./1783596642929.md)
 18. [Higher-Order Functions ft. Functional Programming | Namaste JavaScript Ep. 18](./1783599030513.md)
 19. [map, filter & reduce 🙏 Namaste JavaScript Ep. 19 🔥](./1783602873739.md)
+20. [Callback Hell | Ep 01 Season 02 - Namaste JavaScript](./1783686688959.md)
