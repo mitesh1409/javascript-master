@@ -1,3 +1,7 @@
+/**
+ * Hoisting example
+ */
+
 // Example #1
 
 // Put a break-point here and analyse call stack, scope etc.

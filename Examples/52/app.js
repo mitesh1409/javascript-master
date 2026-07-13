@@ -1,3 +1,7 @@
+/**
+ * Counter using Closure
+ */
+
 // Example #1
 
 function counter() {
