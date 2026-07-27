@@ -24,3 +24,5 @@
 18. [Higher-Order Functions ft. Functional Programming | Namaste JavaScript Ep. 18](./1783599030513.md)
 19. [map, filter & reduce 🙏 Namaste JavaScript Ep. 19 🔥](./1783602873739.md)
 20. [Callback Hell | Ep 01 Season 02 - Namaste JavaScript](./1783686688959.md)
+21. [Promises | Ep 02 Season 02 - Namaste JavaScript](./1785136604661.md)
+22. [Creating a Promise, Chaining & Error Handling | Ep 03 Season 02 Namaste JavaScript](./1785136644722.md)
