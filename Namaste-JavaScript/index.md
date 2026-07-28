@@ -26,3 +26,4 @@
 20. [Callback Hell | Ep 01 Season 02 - Namaste JavaScript](./1783686688959.md)
 21. [Promises | Ep 02 Season 02 - Namaste JavaScript](./1785136604661.md)
 22. [Creating a Promise, Chaining & Error Handling | Ep 03 Season 02 Namaste JavaScript](./1785136644722.md)
+23. [async await | Namaste JavaScript - Season 02 - Ep 04](./1785219760741.md)
