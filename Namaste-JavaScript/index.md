@@ -27,3 +27,5 @@
 21. [Promises | Ep 02 Season 02 - Namaste JavaScript](./1785136604661.md)
 22. [Creating a Promise, Chaining & Error Handling | Ep 03 Season 02 Namaste JavaScript](./1785136644722.md)
 23. [async await | Namaste JavaScript - Season 02 - Ep 04](./1785219760741.md)
+24. [Promise APIs + Interview Questions 🔥 | S.02 Ep.05 - Namaste JavaScript | all, allSettled, race, any](./1790675774652.md)
+25. [`this` keyword in JavaScript 🔥 | Ep.06 - Namaste JavaScript Season 2 🙏](./1790684644177.md)
